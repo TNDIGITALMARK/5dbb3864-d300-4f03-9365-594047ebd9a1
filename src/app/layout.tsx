@@ -6,6 +6,7 @@ import { QueryProvider } from "@/components/query-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Navigation from "@/components/layout/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "EarnHub - Turn Your Opinions Into Real Money",
+  description: "Join thousands earning $200-$1000+ monthly through surveys, affiliate programs, and proven digital guides. Get instant access to top earning opportunities.",
 };
 
 export default function RootLayout({
@@ -35,11 +36,12 @@ export default function RootLayout({
         <QueryProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >
             <TooltipProvider>
+              <Navigation />
               {children}
               <Toaster />
               <Sonner />
